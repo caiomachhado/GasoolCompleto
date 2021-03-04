@@ -3,4 +3,6 @@
     <string name="title">Digite o valor da GASOLINA e do ÁLCOOL respectivamente</string>
     <string name="oil">Gasolina</string>
     <string name="alcohol">Álcool</string>
+    <string name="calculate">Calcular</string>
+
 </resources>
