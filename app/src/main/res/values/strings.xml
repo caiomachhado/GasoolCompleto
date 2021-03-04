@@ -4,4 +4,5 @@
     <string name="oil">Gasolina</string>
     <string name="alcohol">Álcool</string>
     <string name="calculate">Calcular</string>
+    <string name="result">Resultado</string>
 </resources>
