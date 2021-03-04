@@ -61,7 +61,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_oil_value" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_calculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
