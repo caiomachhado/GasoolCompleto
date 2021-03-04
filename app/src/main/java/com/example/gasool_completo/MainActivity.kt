@@ -1,5 +1,6 @@
 package com.example.gasool_completo
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -13,12 +14,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val button : AppCompatButton = findViewById(R.id.button_calculate)
-        val textViewResult : AppCompatTextView = findViewById(R.id.text_view_result)
 
         button.setOnClickListener{
-            Toast.makeText(this, "Cálculo Feito", Toast.LENGTH_LONG). show()
-            textViewResult.text = "O cálculo foi armazenado."
+            val intent = Intent(this, CombustivelActivity::class.java)
+            startActivity(intent)
         }
+
 
     }
 }
