@@ -1,2 +1,3 @@
 # GasoolCompleto
-Projeto - Mobile I - Redentor
+Mobile Development I - Redentor
+- Project similar to practice
