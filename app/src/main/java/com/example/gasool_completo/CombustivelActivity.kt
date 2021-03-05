@@ -9,8 +9,5 @@ class CombustivelActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_combustivel)
 
-        // val button : AppCompatButton = findViewById(R.id.button_result_consume)
-
-
     }
 }
