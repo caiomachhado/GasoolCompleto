@@ -6,4 +6,9 @@
     <string name="calculate">Calcular</string>
     <string name="result">Resultado</string>
     <string name="symbol">R$</string>
+    <string name="oil_expenditure_km">Gasolina/km</string>
+    <string name="alcohol_expenditure_km">Álcool/km</string>
+    <string name="title_activity_expenditure">Insira o cosumo do seu carro</string>
+    <string name="result_button_expenditure">Exibir Resultado</string>
+
 </resources>
