@@ -15,15 +15,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        val buttonFirstActvity : AppCompatButton = findViewById(R.id.button_calculate)
+        val buttonFirstActivity : AppCompatButton = findViewById(R.id.button_calculate)
         val textView : AppCompatTextView = findViewById(R.id.text_view_result)
 
 
 
-       buttonFirstActvity.setOnClickListener{
+       buttonFirstActivity.setOnClickListener{
             val intent = Intent(this, CombustivelActivity::class.java)
             startActivity(intent)
         }
+
+        textView.setOnClickListener(){
+            
 
 
         }
