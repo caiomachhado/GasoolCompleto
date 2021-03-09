@@ -3,13 +3,14 @@ package com.example.gasool_completo
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_main.
+import android.widget.EditText
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.widget.TextViewCompat
+import androidx.
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,8 +22,7 @@ class MainActivity : AppCompatActivity() {
         val textView : AppCompatTextView = findViewById(R.id.text_view_result)
 
 
-
-       buttonFirstActivity.setOnClickListener{
+                buttonFirstActivity.setOnClickListener{
 
            val oilValue = edit_oil_value.text.toFloat()
            val alcoholValue = edit_alcohol_value.text.toFloat()
