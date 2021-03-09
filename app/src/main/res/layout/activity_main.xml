@@ -71,7 +71,8 @@
         android:text="@string/calculate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_alcohol_value" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_alcohol_value"
+        android:onClick="calcularValores"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text_view_result"

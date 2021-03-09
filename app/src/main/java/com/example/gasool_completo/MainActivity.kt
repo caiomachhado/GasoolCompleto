@@ -3,6 +3,7 @@ package com.example.gasool_completo
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatTextView
@@ -13,14 +14,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val button : AppCompatButton = findViewById(R.id.button_calculate)
+
+        val buttonFirstAcitvity : AppCompatButton = findViewById(R.id.button_calculate)
         val textView : AppCompatTextView = findViewById(R.id.text_view_result)
 
-        button.setOnClickListener{
+
+
+       buttonFirstAcitvity.setOnClickListener{
             val intent = Intent(this, CombustivelActivity::class.java)
             startActivity(intent)
         }
 
+
+        }
 
     }
 }
