@@ -3,9 +3,11 @@ package com.example.gasool_completo
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_main.
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
+import androidx.appcompat.widget.AppCompatEditText
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.widget.TextViewCompat
 
@@ -21,12 +23,12 @@ class MainActivity : AppCompatActivity() {
 
 
        buttonFirstActivity.setOnClickListener{
-            val intent = Intent(this, CombustivelActivity::class.java)
-            startActivity(intent)
-        }
 
-        textView.setOnClickListener(){
-            
+           val oilValue = edit_oil_value.text.toFloat()
+           val alcoholValue = edit_alcohol_value.text.toFloat()
+
+           var resultado = (oilValue * alcoholValue)
+        }
 
 
         }
