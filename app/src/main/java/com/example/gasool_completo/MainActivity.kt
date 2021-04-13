@@ -31,13 +31,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun calculateBestFuel() {
-        val alcoholPrice = editTextAlcohol.text.toString()
-        val oilPrice = editTextOil.text.toString()
+        val alcoholPrice = editTextAlcohol?.text.toString()
+        val oilPrice = editTextOil?.text.toString()
         val result = alcoholPrice.toDouble() / oilPrice.toDouble()
         if (result < 0.7) {
-            textViewResult.text = "Álcool é melhor"
+            textViewResult?.text ?: "Álcool é melhor"
         } else {
-            textViewResult.text = "Gasolina é melhor!"
+            textViewResult?.text ?: "Gasolina é melhor!"
         }
 
     }
