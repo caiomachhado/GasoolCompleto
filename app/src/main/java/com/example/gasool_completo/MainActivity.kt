@@ -1,16 +1,11 @@
 package com.example.gasool_completo
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.EditText
-import android.view.View
-import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.appcompat.widget.AppCompatTextView
-import androidx.core.widget.TextViewCompat
-import androidx.
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,9 +22,12 @@ class MainActivity : AppCompatActivity() {
                 buttonCalculate.setOnClickListener{
                     val alcoholPrice = editTextAlcohol.text.toString()
                     val oilPrice = editTextOil.text.toString()
-                    val result = alcoholPrice.toDouble()
-
-                }
+                    val result = alcoholPrice.toDouble()/oilPrice.toDouble()
+                    if(result < 0.7){
+                        textViewResult.text = "Alcool é melhor"
+                    }else{
+                        textViewResult.text = "Gasolina é melhor!"
+                    }
 
 
         }
