@@ -10,7 +10,9 @@
     <string name="alcohol_expenditure_km">Álcool/km</string>
     <string name="title_activity_expenditure">Insira o cosumo do seu carro</string>
     <string name="result_button_expenditure">Exibir Resultado</string>
+    <string name="campo_branco">Campo em Branco!</string>
     <string name="bestAlcohol">Alcool é melhor</string>
     <string name="bestOil">Gasolina é melhor</string>
+    <string name="emptyFiel">Campo em Branco</string>
 
 </resources>

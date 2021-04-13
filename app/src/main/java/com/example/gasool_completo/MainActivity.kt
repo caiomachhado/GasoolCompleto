@@ -32,23 +32,31 @@ class MainActivity : AppCompatActivity() {
         textViewResult = findViewById(R.id.text_view_result)
     }
 
-
-
     private fun calculateBestFuel() {
         val alcoholPrice = editTextAlcohol?.text.toString()
         val oilPrice = editTextOil?.text.toString()
-        if(alcoholPrice.isNotEmpty() && oilPrice.isNotEmpty()){
+        if(isValid(alcoholPrice, oilPrice)){
             val result = alcoholPrice.toDouble() / oilPrice.toDouble()
             showResult(result)
-        }else{
-            Toast.makeText(applicationContext, "Campo em Branco!", Toast.LENGTH_LONG).show()
         }
+    }
+
+    private fun isValid(alcohol: String, oil:String) : Boolean {
+        var result = true
+        if (alcohol.isEmpty()) {
+            result = false
+            editTextAlcohol?.error = getString(R.string.emptyFiel)
+        } else if (oil.isEmpty()) {
+            result = false
+            editTextAlcohol?.error = getString(R.string.emptyFiel)
+        }
+        return result
     }
 
     private fun showResult(result: Double) {
         fun showResult(result: Double) {
-            var text = if (result < ADVANTAGE_COEFFICIENT) "Alcool é melhor" else "Gasolina é melhor"
-            textViewResult?.text = text
+            var text = if (result < ADVANTAGE_COEFFICIENT) getString(R.string.bestAlcohol) else getString(R.string.bestOil)
+            this.textViewResult?.text = text
     }
 
 }
