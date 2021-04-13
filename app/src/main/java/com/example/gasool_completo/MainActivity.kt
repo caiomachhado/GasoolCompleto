@@ -18,17 +18,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        val buttonFirstActivity : AppCompatButton = findViewById(R.id.button_calculate)
-        val textView : AppCompatTextView = findViewById(R.id.text_view_result)
+        val buttonCalculate : AppCompatButton = findViewById(R.id.button_calculate)
+        val editTextAlcohol : AppCompatEditText = findViewById(R.id.edit_alcohol_value)
+        val editTextOil : AppCompatEditText = findViewById(R.id.edit_oil_value)
+        val textViewResult : AppCompatTextView = findViewById(R.id.text_view_result)
 
 
-                buttonFirstActivity.setOnClickListener{
+                buttonCalculate.setOnClickListener{
+                    val alcoholPrice = editTextAlcohol.text.toString()
+                    val oilPrice = editTextOil.text.toString()
+                    val result = alcoholPrice.toDouble()
 
-           val oilValue = edit_oil_value.text.toFloat()
-           val alcoholValue = edit_alcohol_value.text.toFloat()
-
-           var resultado = (oilValue * alcoholValue)
-        }
+                }
 
 
         }
