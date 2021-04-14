@@ -2,6 +2,9 @@ package com.example.gasool_completo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.ContextMenu
+import android.view.Menu
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatEditText
@@ -61,5 +64,11 @@ class MainActivity : AppCompatActivity() {
             var text = if (result < ADVANTAGE_COEFFICIENT) getString(R.string.bestAlcohol) else getString(R.string.bestOil)
             textViewResult?.text = text
         }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
     }
 
