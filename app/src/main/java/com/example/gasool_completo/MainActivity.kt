@@ -1,9 +1,11 @@
 package com.example.gasool_completo
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ContextMenu
 import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
@@ -70,5 +72,17 @@ class MainActivity : AppCompatActivity() {
         return super.onCreateOptionsMenu(menu)
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.item_consume -> getToConsumeActivity()
+        }
+        return super.onOptionsItemSelected(item)
     }
+
+    private fun getToConsumeActivity() {
+        val intent = Intent(this, ConsumeActivity::class.java)
+        startActivity(intent)
+    }
+
+}
 
