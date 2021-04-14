@@ -36,27 +36,30 @@ class MainActivity : AppCompatActivity() {
         val alcoholPrice = editTextAlcohol?.text.toString()
         val oilPrice = editTextOil?.text.toString()
         if(isValid(alcoholPrice, oilPrice)){
-            val result = alcoholPrice.toDouble() / oilPrice.toDouble()
+            val result = alcoholPrice.toDouble()/oilPrice.toDouble()
             showResult(result)
         }
     }
 
     private fun isValid(alcohol: String, oil:String) : Boolean {
         var result = true
-        if (alcohol.isEmpty()) {
+        if(alcohol.isEmpty() && oil.isEmpty()){
+            result = false
+            editTextAlcohol?.error = getString(R.string.emptyFiel)
+            editTextOil?.error = getString(R.string.emptyFiel)
+        }else if (alcohol.isEmpty()) {
             result = false
             editTextAlcohol?.error = getString(R.string.emptyFiel)
         } else if (oil.isEmpty()) {
             result = false
-            editTextAlcohol?.error = getString(R.string.emptyFiel)
+            editTextOil?.error = getString(R.string.emptyFiel)
         }
         return result
     }
 
     private fun showResult(result: Double) {
-        fun showResult(result: Double) {
             var text = if (result < ADVANTAGE_COEFFICIENT) getString(R.string.bestAlcohol) else getString(R.string.bestOil)
-            this.textViewResult?.text = text
+            textViewResult?.text = text
+        }
     }
 
-}
