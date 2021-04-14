@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Gasool - Completo</string>
     <string name="title">Digite o valor do álcool e da gasolina em seus respectivos campos.</string>
+    <string name="titleActivity2">Digite o consumo atual do seu carro</string>
     <string name="oil">Gasolina</string>
     <string name="alcohol">Álcool</string>
     <string name="calculate">Calcular</string>
