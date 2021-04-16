@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CombustivelActivity">
+    tools:context=".ConsumeActivity">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text_view_expenditure"
@@ -13,6 +13,7 @@
         android:layout_marginTop="24dp"
         android:text="@string/title_activity_expenditure"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,33 +21,42 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/edit_oil_expenditure"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_width="146dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="36dp"
         android:hint="@string/oil_expenditure_km"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_second"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_view_expenditure" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/edit_alcohol_expenditure"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_width="141dp"
+        android:layout_height="38dp"
         android:hint="@string/alcohol_expenditure_km"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_oil_expenditure" />
+        app:layout_constraintStart_toStartOf="@+id/guideline_second"
+        app:layout_constraintTop_toTopOf="@+id/edit_oil_expenditure" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_result_consume"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="100dp"
+        android:background="@color/yellow"
         android:shadowColor="#F44336"
         android:text="@string/result_button_expenditure"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_alcohol_expenditure" />
+        app:layout_constraintTop_toBottomOf="@+id/text_view_expenditure" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_second"
+        app:layout_constraintGuide_percent="0.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
