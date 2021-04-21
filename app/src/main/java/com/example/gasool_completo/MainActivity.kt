@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getToConsumeActivity() {
-        val intent = Intent(this, ConsumeActivity::class.java)
+        val intent = Intent(this, SpotifyActivity::class.java)
         startActivity(intent)
     }
 
